@@ -22,7 +22,7 @@
                         <th>Id Vehiculo</th> 
                         <th>Id Cita</th> 
                         <th>Precio</th> 
-                        <th>Comentario</th> 
+                        <th>Estado</th> 
                         <th>Tipo Servicio</th> 
                         <th width="180">Opciones</th> 
                     </thead> 
@@ -30,12 +30,12 @@
                         @foreach($servicios as $servicio) 
                         <tr> 
             <td>{{ $servicio->id_servicio }}</td> 
-            <td>{{ $servicio->garantia_id_garantia }}</td>
+            <td>{{ $servicio->garantias->tiempo_garantia }}</td>
             <td>{{ $servicio->empleado_id_empleado }}</td>
             <td>{{ $servicio->vehiculo_id_vehiculo }}</td>
             <td>{{ $servicio->cita_id_cita }}</td>
             <td>{{ $servicio->precio }}</td> 
-            <td>{{ $servicio->comentarios }}</td> 
+            <td>{{ $servicio->estado }}</td> 
             <td>{{ $servicio->tipo_servicios }}</td> 
             <td> 
            <a href="{{URL::action('ServicioController@edit',$servicio->id_servicio)}}"><button class="btn btn-primary">Actualizar</button></a>

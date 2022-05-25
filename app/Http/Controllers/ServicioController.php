@@ -30,10 +30,13 @@ class ServicioController extends Controller
         ->select("veh.placa", "emp.nombre_completo", "cit.fecha_cita", "dserv.servicio_id_servicio")
         ->get();*/
 
+        
+
         if($request){
 
             $query=trim($request->get('searchText'));
-            $servicios=Servicio::orderBy('id_servicio','ASC')->paginate(3);
+           // $servicios=Servicio::orderBy('id_servicio','ASC')->paginate(3);
+            $servicios = Servicio::with('garantias'/*,'empleados','vehiculos','citas'*/)->paginate(3);    
             return view('servicio.index',["servicios"=>$servicios,"searchText"=>$query]);
             
         }
@@ -51,10 +54,9 @@ class ServicioController extends Controller
 
         $garantia=Garantia::orderBy('id_garantia','DESC')->select(
             'garantias.id_garantia',
-            'garantias.fecha_garantia', 
-            'garantias.comentarios', 
-            'garantias.condicion', 
-            'garantias.fecha_limite')->get();
+            'garantias.garantias_servicios', 
+            'garantias.tiempo_garantia', 
+            'garantias.kilometraje')->get();
     
             return view('servicio.create')->with('garantia',$garantia);
 
@@ -76,7 +78,7 @@ class ServicioController extends Controller
         $servicios->vehiculo_id_vehiculo=$request->get('vehiculo_id_vehiculo'); 
         $servicios->cita_id_cita=$request->get('cita_id_cita'); 
         $servicios->precio=$request->get('precio'); 
-        $servicios->comentarios=$request->get('comentarios'); 
+        $servicios->estado=$request->get('estado'); 
         $servicios->tipo_servicios=$request->get('tipo_servicios'); 
         $servicios->save(); 
         return Redirect::to('servicio');
@@ -121,7 +123,7 @@ class ServicioController extends Controller
         $servicios->vehiculo_id_vehiculo=$request->get('vehiculo_id_vehiculo'); 
         $servicios->cita_id_cita=$request->get('cita_id_cita'); 
         $servicios->precio=$request->get('precio'); 
-        $servicios->comentarios=$request->get('comentarios'); 
+        $servicios->estado=$request->get('estado'); 
         $servicios->tipo_servicios=$request->get('tipo_servicios'); 
         $servicios->update(); return Redirect::to('servicio');
     }

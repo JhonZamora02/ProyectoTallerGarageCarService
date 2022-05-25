@@ -37,7 +37,7 @@ class GarantiaController extends Controller
             'servicios.vehiculo_id_vehiculo',
             'servicios.cita_id_cita',
             'servicios.precio',
-            'servicios.comentarios',
+            'servicios.estado',
             'servicios.tipo_servicios')->get();
     
             return view('garantia.create')->with('servicio',$servicio);
@@ -53,10 +53,9 @@ class GarantiaController extends Controller
     {
         $garantias=new Garantia; 
         $garantias->id_garantia=$request->get('id_garantia');
-        $garantias->fecha_garantia=$request->get('fecha_garantia'); 
-        $garantias->comentarios=$request->get('comentarios'); 
-        $garantias->condicion=$request->get('condicion'); 
-        $garantias->fecha_limite=$request->get('fecha_limite'); 
+        $garantias->garantias_servicios=$request->get('garantias_servicios'); 
+        $garantias->tiempo_garantia=$request->get('tiempo_garantia'); 
+        $garantias->kilometraje=$request->get('kilometraje'); 
         $garantias->save(); 
         return Redirect::to('garantia');
     }
@@ -95,10 +94,9 @@ class GarantiaController extends Controller
     {
         $garantias=Garantia::findOrFail($id_garantia); 
         $garantias->id_garantia=$request->get('id_garantia');
-        $garantias->fecha_garantia=$request->get('fecha_garantia'); 
-        $garantias->comentarios=$request->get('comentarios'); 
-        $garantias->condicion=$request->get('condicion'); 
-        $garantias->fecha_limite=$request->get('fecha_limite'); 
+        $garantias->garantias_servicios=$request->get('garantias_servicios'); 
+        $garantias->tiempo_garantia=$request->get('tiempo_garantia'); 
+        $garantias->kilometraje=$request->get('kilometraje'); 
         $garantias->update(); return Redirect::to('garantia');
     }
 

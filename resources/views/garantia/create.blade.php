@@ -23,32 +23,29 @@
 <input type="number" name="id_garantia" id="id_garantia" class="form-control" placeholder= "Digite el código de la garantia"> 
             </div> </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
-
                <div class="form-group">
-               <br> <label for="fecha_garantia">Fecha De La Garantia</label>
-<input type="date" name="fecha_garantia" id="fecha_garantia" class="form-control" placeholder="Fecha en la que se hizo la garantia" 
-value="{{date('Y-m-d H:i:s') }}">
+               <br> <label for="garantias_servicios">Servicio asociado</label>
+                  <select name="garantias_servicios" id="garantias_servicios" class="form-control selectpicker" data-livesearch="true" required>
+                      <option value="" disabled selected>Seleccionar:</option>
+                      <option value="Lamina y pintura">Lámina y pintura</option>
+                      <option value="Mecanica general">Mecánica general</option>
+                      <option value="Sistema electrico">Sistema eléctrico</option>
+                      <option value="Cambio de aceite">Cambio de aceite</option>
+                  </select>
               </div>
 
    </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                <div class="form-group"> 
-                   <br><label for="comentarios">Comentarios</label> 
-<input type="text" name="comentarios" id="comentarios" class="form-control" placeholder="Comentarios acerca de la garantia"> 
+                   <br><label for="tiempo_garantia">Tiempo de garantia</label> 
+<input type="text" name="tiempo_garantia" id="tiempo_garantia" class="form-control" placeholder="Tiempo de la garantia"> 
                </div> 
            </div> 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                <div class="form-group"> 
-               <br> <label for="condicion">Condicion De la Garantia</label> 
-<input type="text" name="condicion" id="condicion" class="form-control" placeholder="Condicion de la garantia"> 
-           </div> </div> 
-           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
-               <div class="form-group">
-               <br> <label for="fecha_limite">Fecha Limite De La Garantia</label>
-<input type="date" name="fecha_limite" id="fecha_limite" class="form-control" placeholder="Fecha limite de vencimiento de la garantia" 
-value="{{date('Y-m-d H:i:s') }}">
-              </div>
-           </div> 
+               <br> <label for="kilometraje">Kilometraje</label> 
+<input type="text" name="kilometraje" id="kilometraje" class="form-control" placeholder="Kilometraje de la garantia"> 
+           </div> </div>  
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
       <div class="form-group"> <br> 
 <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok"></span> Guardar</button> 

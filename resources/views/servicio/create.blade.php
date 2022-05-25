@@ -35,7 +35,7 @@
                  <select name="garantia_id_garantia" id="garantia_id_garantia" class="form-control selectpicker" data-livesearch="true" required>
                      <option value="" disabled selected>Garantia:</option>
                       @foreach($garantia as $garantia)
-                      <option value="{{$garantia->id_garantia}}">{{ $garantia->condicion }}</option>
+                      <option value="{{$garantia->id_garantia}}">{{ $garantia->garantias_servicios }}</option>
                     @endforeach
                  </select>
           </div></div>
@@ -68,8 +68,8 @@
            </div> 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                <div class="form-group"> 
-               <br> <label for="comentarios">Comentario</label> 
-<input type="text" name="comentarios" id="comentarios" class="form-control" placeholder="Ingrese un comentario descriptivo del servicio"> 
+               <br> <label for="estado">Estado</label> 
+<input type="text" name="estado" id="estado" class="form-control" placeholder="Ingrese un comentario descriptivo del servicio"> 
            </div> </div> 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                <div class="form-group">

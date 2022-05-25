@@ -101,7 +101,7 @@ desired effect
               <!-- <img src="dist/img/avatar.png" class="user-image" alt="User Image"> -->
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               
-                        <p class="text-xl">Bienvenido <b>{{ auth()->user()->name }}</b></p>
+                        <p class="text-xl">Bienvenido <b>{{ auth()->user() }}</b></p>
               
             </a>
             <ul class="dropdown-menu  w-50">

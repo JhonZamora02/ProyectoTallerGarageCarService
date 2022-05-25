@@ -58,8 +58,8 @@ value="{{$servicios->cita_id_cita}}">
             </div> 
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                 <div class="form-group"><br> 
-                    <label for="comentarios">Comentario</label> 
-   <input type="text" name="comentarios" id="comentarios" class="form-control" value="{{$servicios->comentarios}}"> 
+                    <label for="estado">Estado</label> 
+   <input type="text" name="estado" id="estado" class="form-control" value="{{$servicios->comentarios}}"> 
                 </div> 
             </div> 
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 

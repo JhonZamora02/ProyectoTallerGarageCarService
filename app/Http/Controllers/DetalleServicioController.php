@@ -41,7 +41,7 @@ class DetalleServicioController extends Controller
         'servicios.vehiculo_id_vehiculo', 
         'servicios.cita_id_cita', 
         'servicios.precio',
-        'servicios.comentarios',
+        'servicios.estado',
         'servicios.tipo_servicios')->get();
 
         return view('detalleservicio.create')->with('servicio',$servicio);
