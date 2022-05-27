@@ -8,8 +8,13 @@
         <div class="col-md-2"> 
             <a href="servicio/create" class="pull-right"> 
                 <button class="btn btn-success" style="text-align: center">Crear Servicio</button> 
+            </a>
+        </div>
+        <div class=""> 
+            <a href="detalleservicio/create" class="pull-right"> 
+                <button class="btn btn-success" style="text-align: center">Detalle del Servicio</button> 
             </a> 
-        </div> 
+        </div>  
     </div>
     <div class="row"> 
         <div class="col-md-12 col-xs-12"> 

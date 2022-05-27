@@ -67,10 +67,16 @@
                </div> 
            </div> 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
-               <div class="form-group"> 
-               <br> <label for="estado">Estado</label> 
-<input type="text" name="estado" id="estado" class="form-control" placeholder="Ingrese un comentario descriptivo del servicio"> 
-           </div> </div> 
+               <div class="form-group">
+               <br> <label for="estado">Estado</label>
+                  <select name="estado" id="estado" class="form-control selectpicker" data-livesearch="true" required>
+                      <option value="En curso (asignada)">En curso (asignada)</option>
+                      <option value="En curso (planificada)">En curso (planificada)</option>
+                      <option value="En espera">En espera</option>
+                      <option value="Resueltas">Resueltas</option>
+                  </select>
+               </div>
+           </div> 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                <div class="form-group">
                <br> <label for="tipo_servicios">Tipo de servicio</label>

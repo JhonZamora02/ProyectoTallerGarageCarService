@@ -32,9 +32,9 @@
            <br>
               <label for="Role">Codigo Del Servicio</label>
                  <select name="servicio_id_servicio" id="servicio_id_servicio" class="form-control selectpicker" data-livesearch="true" required>
-                     <option value="" disabled selected>Servicio:</option>
+                     <option value="" disabled selected>Código del Servicio:</option>
                       @foreach($servicio as $servicio)
-                      <option value="{{$servicio->id_servicio}}">{{ $servicio->tipo_servicios }}</option>
+                      <option value="{{$servicio->id_servicio}}" >{{ $servicio->id_servicio}}</option>
                     @endforeach
                  </select>
           </div></div>
