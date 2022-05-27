@@ -140,7 +140,6 @@ desired effect
           <ul class="treeview-menu">
             <li><a href="http://localhost:8000/garantia">Garantía</a></li>
             <li><a href="http://localhost:8000/servicio">Servicio</a></li>
-            <li><a href="http://localhost:8000/detalleservicio">Detalle Servicio</a></li>
           </ul>
 
 
